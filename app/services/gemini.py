@@ -22,6 +22,8 @@ ESQUEMA_RESPUESTA = {
         "respuesta": {"type": "STRING"},
         "hecho_nuevo": {"type": "STRING", "nullable": True},
         "categoria_hecho": {"type": "STRING", "enum": list(CATEGORIAS_HECHO), "nullable": True},
+        "cancelar_receta": {"type": "BOOLEAN"},
+        "receta_recomendada": {"type": "STRING", "nullable": True},
     },
     "required": ["respuesta"],
 }
@@ -38,6 +40,8 @@ class ResultadoIA:
     respuesta: str
     hecho_nuevo: str | None = None
     categoria_hecho: str | None = None
+    cancelar_receta: bool = False
+    receta_recomendada: str | None = None
 
 
 class ClienteGemini:
@@ -123,6 +127,21 @@ class ClienteGemini:
         if not respuesta:
             raise ErrorGemini("JSON sin 'respuesta'")
 
+        # Desempaquetar si Gemini anidó un JSON dentro del campo string 'respuesta'
+        if respuesta.startswith("{") and "respuesta" in respuesta:
+            try:
+                sub_obj = json.loads(respuesta)
+                if isinstance(sub_obj, dict) and "respuesta" in sub_obj:
+                    respuesta = str(sub_obj.get("respuesta") or "").strip()
+                    if not obj.get("hecho_nuevo") and sub_obj.get("hecho_nuevo"):
+                        obj["hecho_nuevo"] = sub_obj.get("hecho_nuevo")
+                    if "cancelar_receta" in sub_obj:
+                        obj["cancelar_receta"] = sub_obj.get("cancelar_receta")
+                    if "receta_recomendada" in sub_obj:
+                        obj["receta_recomendada"] = sub_obj.get("receta_recomendada")
+            except Exception:
+                pass
+
         hecho = obj.get("hecho_nuevo")
         hecho = str(hecho).strip() if hecho is not None else None
         if hecho and hecho.lower() in _VALORES_NULOS:
@@ -131,8 +150,14 @@ class ClienteGemini:
         if categoria not in CATEGORIAS_HECHO:
             categoria = "personal" if hecho else None
 
+        cancelar = bool(obj.get("cancelar_receta", False))
+        receta_rec = obj.get("receta_recomendada")
+        receta_rec = str(receta_rec).strip() if receta_rec else None
+
         return ResultadoIA(
             respuesta=limitar_frases(respuesta, 3),
             hecho_nuevo=hecho[:300] if hecho else None,
             categoria_hecho=categoria,
+            cancelar_receta=cancelar,
+            receta_recomendada=receta_rec,
         )

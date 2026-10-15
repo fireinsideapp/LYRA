@@ -45,9 +45,13 @@ async def conversar(
 
     fuente = "gemini"
     hecho_guardado: str | None = None
+    cancelar_receta = False
+    receta_recomendada: str | None = None
     try:
         resultado = await gemini.generar(sistema, historial, req.pregunta)
         respuesta = resultado.respuesta
+        cancelar_receta = resultado.cancelar_receta
+        receta_recomendada = resultado.receta_recomendada
         if resultado.hecho_nuevo:
             hecho = await memoria.guardar_hecho(
                 session, disp.id, resultado.hecho_nuevo, resultado.categoria_hecho or "personal"
@@ -83,4 +87,6 @@ async def conversar(
         contacto_emergencia=contacto,
         audio_url=audio_url,
         fuente=fuente,
+        cancelar_receta=cancelar_receta,
+        receta_recomendada=receta_recomendada,
     )

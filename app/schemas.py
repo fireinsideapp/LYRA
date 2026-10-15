@@ -73,6 +73,8 @@ class ContactoEmergencia(BaseModel):
 
 
 class ConversacionRespuesta(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
     respuesta: str
     hecho_nuevo: str | None = None  # Interoperabilidad con Android (@SerialName("hecho_nuevo") val hechoNuevo)
     hecho_guardado: str | None = None
@@ -80,6 +82,8 @@ class ConversacionRespuesta(BaseModel):
     contacto_emergencia: ContactoEmergencia | None = None
     audio_url: str | None = None
     fuente: Literal["gemini", "respaldo"] = "gemini"
+    cancelar_receta: bool = Field(default=False, alias="cancelarReceta")
+    receta_recomendada: str | None = Field(default=None, alias="recetaRecomendada")
 
 
 # ---------- Perfil ----------
