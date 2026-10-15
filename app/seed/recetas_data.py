@@ -3,6 +3,7 @@
 RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido con avena, cocidas en un caldillo casero de jitomate, sin '
                        'necesidad de agregar mucha sal.',
         'dificultad': 'media',
+        'imagen': 'albondigas-pollo-paso1.jpeg',
         'ingredientes': {   'base': [('Pollo molido', '400 g'), ('Avena molida', '30 g')],
                             'salsa': [   ('Jitomate', '300 g'),
                                          ('Cebolla', '60 g'),
@@ -129,6 +130,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Albóndigas suaves de carne molida con arroz, cocidas en un caldo casero de jitomate, zanahoria '
                        'y calabacita, con verduras tiernas y poca sal añadida.',
         'dificultad': 'media',
+        'imagen': 'albondigas-res-caldo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Carne molida de res', '400 g'),
                                         ('Arroz crudo', '40 g'),
                                         ('Zanahoria', '150 g'),
@@ -287,6 +289,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
         'titulo': 'Albóndigas de res en caldo de verduras'},
     {   'descripcion': 'Arroz suelto cocido con salsa de jitomate. Un acompañamiento clásico de la comida mexicana.',
         'dificultad': 'media',
+        'imagen': 'arroz-paso1.jpeg',
         'ingredientes': {   'base': [   ('Arroz', '1 taza'),
                                         ('Aceite', '3 cucharadas'),
                                         ('Caldo o agua caliente', '2 tazas'),
@@ -425,6 +428,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
         'titulo': 'Arroz rojo'},
     {   'descripcion': 'Desayuno caliente de avena con leche y manzana cocida, de consistencia cremosa y sabor suave.',
         'dificultad': 'fácil',
+        'imagen': 'avena-manzana-paso1.jpeg',
         'ingredientes': {   'base': [   ('Avena en hojuelas', '80 g'),
                                         ('Leche', '400 ml'),
                                         ('Manzana pelada y picada', '150 g'),
@@ -528,6 +532,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
         'titulo': 'Avena cremosa con manzana'},
     {   'descripcion': 'Guiso casero de calabacita, elote y jitomate con queso fresco, de sabor suave.',
         'dificultad': 'fácil',
+        'imagen': 'calabacitas-elote-paso1.jpeg',
         'ingredientes': {   'base': [   ('Calabacitas', '300 g'),
                                         ('Granos de elote cocidos', '100 g'),
                                         ('Jitomate', '150 g'),
@@ -635,6 +640,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
         'titulo': 'Calabacitas con elote y queso'},
     {   'descripcion': 'Caldo casero de pollo con arroz, zanahoria y calabacita cocidos hasta quedar suaves.',
         'dificultad': 'media',
+        'imagen': 'caldo-pollo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Pechuga de pollo sin hueso', '400 g'),
                                         ('Arroz blanco crudo', '100 g'),
                                         ('Zanahoria', '150 g'),
@@ -788,6 +794,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Caldo casero de res con papa, zanahoria, calabacita y elote, preparado con verduras bien '
                        'cocidas para ser suave y reconfortante.',
         'dificultad': 'media',
+        'imagen': 'caldo-res-paso1.jpeg',
         'ingredientes': {   'base': [   ('Carne de res para caldo sin exceso de grasa', '500 g'),
                                         ('Papa', '250 g'),
                                         ('Zanahoria', '150 g'),
@@ -931,6 +938,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Desayuno tradicional mexicano: totopos de maíz bañados en una rica salsa roja, con queso, '
                        'crema, cebolla y cilantro.',
         'dificultad': 'fácil',
+        'imagen': 'rojos-paso1.jpeg',
         'ingredientes': {   'base': [   ('Tortillas de maíz', '10 a 12 (mejor si son de un día anterior)'),
                                         ('Aceite para freír', 'Suficiente')],
                             'salsa': [   ('Tomates rojos (jitomates)', '4 medianos'),
@@ -1078,6 +1086,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Desayuno tradicional mexicano: totopos de maíz bañados en salsa verde, con queso, crema, '
                        'cebolla y cilantro.',
         'dificultad': 'fácil',
+        'imagen': 'verdes-paso1.jpeg',
         'ingredientes': {   'base': [   ('Tortillas de maíz cortadas en triángulos', '8 a 12 aproximadamente'),
                                         ('Aceite para freír', 'Suficiente')],
                             'salsa': [   ('Tomatillos verdes', 'Medio kilo'),
@@ -1214,6 +1223,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Crema suave de calabacita con papa y leche, ideal como entrada o cena ligera y muy amigable '
                        'con el estómago.',
         'dificultad': 'media',
+        'imagen': 'crema-calabacita-paso1.jpeg',
         'ingredientes': {   'base': [   ('Calabacitas', '400 g'),
                                         ('Papa', '100 g (una papa chica)'),
                                         ('Leche', '250 ml (una taza)'),
@@ -1344,6 +1354,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Crema casera de zanahoria y leche, de consistencia muy suave, sabor ligeramente dulce y fácil '
                        'de digerir.',
         'dificultad': 'media',
+        'imagen': 'crema-zanahoria-paso1.jpeg',
         'ingredientes': {   'base': [   ('Zanahoria', '400 g'),
                                         ('Papa', '100 g (una papa chica)'),
                                         ('Leche', '250 ml (una taza)'),
@@ -1473,6 +1484,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Tortillas suaves bañadas en una rica salsita de frijoles y rellenas de queso fresco. Un '
                        'almuerzo tradicional muy amigable con el estómago.',
         'dificultad': 'fácil',
+        'imagen': 'enfrijoladas-paso1.jpeg',
         'ingredientes': {   'base': [   ('Tortillas de maíz', '6 piezas'),
                                         ('Queso fresco (panela, canasto o cotija)', '100 g'),
                                         ('Aceite vegetal o manteca', '5 ml (una cucharadita)')],
@@ -1615,6 +1627,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Frijoles cocidos lentamente con cebolla y ajo, en su caldito. Ideales para acompañar cualquier '
                        'comida o comerlos solitos de la olla.',
         'dificultad': 'media',
+        'imagen': 'frijoles-paso1.jpeg',
         'ingredientes': {   'base': [   ('Frijol seco (pinto, bayo o negro)', '2 tazas (aprox. medio kilo)'),
                                         ('Agua', '8 tazas (o la necesaria)'),
                                         ('Cebolla', 'Un cuarto de pieza'),
@@ -1766,6 +1779,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Hotcakes caseros suaves elaborados con avena, plátano y leche, ideales para un desayuno '
                        'sencillo y muy amigable con el estómago.',
         'dificultad': 'fácil',
+        'imagen': 'hotcakes-avena-paso1.jpeg',
         'ingredientes': {   'base': [   ('Avena molida', '100 g'),
                                         ('Plátano maduro', '120 g (un plátano mediano)'),
                                         ('Leche', '120 ml (media taza)'),
@@ -1881,6 +1895,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Un desayuno tradicional, rápido y muy nutritivo. Huevos revueltitos con jitomate, cebolla y '
                        'chile, suavecitos y fáciles de masticar.',
         'dificultad': 'fácil',
+        'imagen': 'mexicana-paso1.jpeg',
         'ingredientes': {   'base': [   ('Huevos', '4 piezas'),
                                         ('Jitomate', '1 mediano'),
                                         ('Cebolla', 'Un cuarto de pieza'),
@@ -1996,6 +2011,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Un guisito de lentejas con zanahoria y jitomate muy casero, nutritivo y suavecito para el '
                        'estómago.',
         'dificultad': 'media',
+        'imagen': 'lentejas-paso1.jpeg',
         'ingredientes': {   'base': [   ('Lentejas secas', '250 g (aprox. 1 taza y media)'),
                                         ('Zanahoria', '150 g (1 grande o 2 chicas)'),
                                         ('Agua', '1.5 litros'),
@@ -2153,6 +2169,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Pan con frijoles refritos y quesito Oaxaca derretido, preparados con una textura suave y muy '
                        'fáciles de comer.',
         'dificultad': 'fácil',
+        'imagen': 'molletes-paso1.jpeg',
         'ingredientes': {   'base': [   ('Bolillos pequeños', '2 piezas'),
                                         ('Frijoles cocidos y escurridos', '160 g (como una taza chiquita)'),
                                         ('Queso Oaxaca deshebrado', '80 g'),
@@ -2277,6 +2294,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Filete de pescado blanco muy blandito, cocido al vapor con zanahoria y calabacita. Muy ligero '
                        'y fácil de digerir.',
         'dificultad': 'fácil',
+        'imagen': 'pescado-vapor-paso1.jpeg',
         'ingredientes': {   'base': [   (   'Filete de pescado blanco (como tilapia o mojarra)',
                                             '300 g (2 filetes medianos)'),
                                         ('Zanahoria', '100 g (una chica)'),
@@ -2395,6 +2413,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Carne molida de res guisada con papa, zanahoria y jitomate. Preparado jugosito, bien cocido y '
                        'con verduras muy picaditas para que sea suave y fácil de comer.',
         'dificultad': 'media',
+        'imagen': 'picadillo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Carne molida de res magra', '400 g'),
                                         ('Papa', '200 g (una grande o dos chicas)'),
                                         ('Zanahoria', '120 g (una mediana)'),
@@ -2544,6 +2563,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Pollo cocido y deshebrado finamente con una salsita verde de pepitas y tomatillo. Un guisado '
                        'casero, muy nutritivo, sin picante y con una textura muy suave para su estómago.',
         'dificultad': 'media',
+        'imagen': 'pipian-pollo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Pechuga de pollo sin hueso', '450 g (aprox. dos pechugas chicas)'),
                                         ('Agua', '700 ml (unas tres tazas)'),
                                         ('Aceite vegetal o manteca', '5 ml (una cucharadita)')],
@@ -2687,6 +2707,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Pechuga de pollo cocida y deshebrada, guisada en una crema ligerita con rajas de chile poblano '
                        'y elote. Muy suavecita y sin nada de picante para cuidar su estómago.',
         'dificultad': 'media',
+        'imagen': 'pollo-rajas-paso1.jpeg',
         'ingredientes': {   'base': [   ('Pechuga de pollo sin hueso', '450 g (aprox. 2 pechugas chicas)'),
                                         ('Chile poblano', '1 pieza grande'),
                                         ('Granos de elote amarillo', '120 g (como media taza)'),
@@ -2825,6 +2846,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Pollo cocido y deshebrado muy finito, acompañado de una salsita verde suave, sin picante y '
                        'amigable con su estómago.',
         'dificultad': 'media',
+        'imagen': 'pollo-salsa-verde-paso1.jpeg',
         'ingredientes': {   'base': [   ('Pechuga de pollo sin hueso', '450 g (aprox. 2 pechugas chicas)'),
                                         ('Agua', '800 ml (poco más de tres tazas)'),
                                         ('Aceite vegetal', '5 ml (una cucharadita)')],
@@ -2962,6 +2984,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Puré muy cremoso de papa con leche y quesito fresco. Es ideal como guarnición, muy suave de '
                        'masticar y amigable con su estómago.',
         'dificultad': 'media',
+        'imagen': 'pure-papa-paso1.jpeg',
         'ingredientes': {   'base': [('Papa', '500 g (unas 3 papas medianas)'), ('Leche', '120 ml (media taza)')],
                             'salsa': [('Sal', 'Al gusto')],
                             'servicio': [   ('Queso fresco (panela o canasto)', '70 g (un buen pedazo)'),
@@ -3080,6 +3103,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Quesadillas de maíz rellenas de champiñones guisaditos y queso Oaxaca derretido. Una comida '
                        'muy calientita, de textura suave y fácil de digerir.',
         'dificultad': 'fácil',
+        'imagen': 'quesadillas-champinones-paso1.jpeg',
         'ingredientes': {   'base': [   ('Tortillas de maíz', '4 piezas'),
                                         ('Champiñones frescos', '200 g (aprox. una charolita chica)'),
                                         ('Queso Oaxaca', '80 g (un trozo pequeño)'),
@@ -3221,6 +3245,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Sopa calientita de fideo dorado en caldito de jitomate. Muy casera, reconfortante y fácil de '
                        'comer para consentir a su estómago.',
         'dificultad': 'fácil',
+        'imagen': 'fideo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Fideo delgado (del número 0 o 1)', '1 bolsita de 200 gramos'),
                                         ('Aceite vegetal o manteca', '2 cucharadas'),
                                         ('Caldo de pollo o agua', '4 tazas (un litro)'),
@@ -3350,6 +3375,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Caldo casero muy nutritivo con zanahoria, papa, chayote y calabacita cocidos hasta quedar '
                        'suavecitos y fáciles de digerir para su estómago.',
         'dificultad': 'media',
+        'imagen': 'sopa-verduras-paso1.jpeg',
         'ingredientes': {   'base': [   ('Zanahoria', '150 g (una grande o dos medianas)'),
                                         ('Papa', '200 g (una papa grande)'),
                                         ('Chayote', '150 g (medio chayote grande)'),
@@ -3497,6 +3523,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Pollo deshebrado muy finito con jitomate y cebollita. Jugosito, bien cocido y sin nada de '
                        'picante, ideal para cuidar su estómago.',
         'dificultad': 'media',
+        'imagen': 'tinga-pollo-paso1.jpeg',
         'ingredientes': {   'base': [   ('Pechuga de pollo sin hueso', '450 g (aprox. 2 pechugas chicas)'),
                                         ('Cebolla', '150 g (media cebolla grande)'),
                                         ('Agua', '700 ml (unas 3 tazas)'),
@@ -3639,6 +3666,7 @@ RECETAS: list[dict] = [   {   'descripcion': 'Albóndigas suaves de pollo molido
     {   'descripcion': 'Ricos tlacoyos caseros de masa de maíz rellenos de requesón pasteurizado, cocinados en el '
                        'comal sin freír. Muy suavecitos, bien cocidos y fáciles de digerir.',
         'dificultad': 'fácil',
+        'imagen': 'tlacoyos-requeson-paso1.jpeg',
         'ingredientes': {   'base': [   (   'Masa de maíz (de tortillería o de harina preparada)',
                                             '450 g (poco menos de medio kilo)'),
                                         (   'Requesón pasteurizado',

@@ -2,7 +2,7 @@
 
 import logging
 
-from sqlalchemy import func, select
+from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models import Ingrediente, Paso, Receta
@@ -11,12 +11,19 @@ from app.seed.recetas_data import RECETAS
 log = logging.getLogger(__name__)
 
 
-async def sembrar_recetas(session: AsyncSession) -> int:
-    """Inserta las recetas base sólo si la tabla está vacía. Devuelve cuántas insertó."""
+async def sembrar_recetas(session: AsyncSession, forzar: bool = False) -> int:
+    """Inserta las recetas base. Si forzar=True o si la tabla está vacía, limpia y siembra."""
     total = await session.scalar(select(func.count(Receta.id)))
-    if total:
+    if total and not forzar:
         log.info("Catálogo ya presente (%s recetas); no se siembra.", total)
         return 0
+
+    if total and forzar:
+        log.info("Forzando resiembra del catálogo de recetas (limpiando tablas previas)...")
+        await session.execute(delete(Paso))
+        await session.execute(delete(Ingrediente))
+        await session.execute(delete(Receta))
+        await session.flush()
 
     for datos in RECETAS:
         slug = datos["slug"]
@@ -27,7 +34,7 @@ async def sembrar_recetas(session: AsyncSession) -> int:
             porciones=datos["porciones"],
             tiempo_total_min=datos["tiempo_total_min"],
             dificultad=datos["dificultad"],
-            imagen=f"{slug}.jpg",
+            imagen=datos.get("imagen") or f"{slug}.jpg",
         )
         orden = 0
         for categoria in ("base", "salsa", "servicio"):
@@ -45,3 +52,4 @@ async def sembrar_recetas(session: AsyncSession) -> int:
     await session.commit()
     log.info("Sembradas %s recetas base.", len(RECETAS))
     return len(RECETAS)
+
