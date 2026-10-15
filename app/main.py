@@ -74,3 +74,18 @@ app.include_router(perfil.router)
 @app.get("/", include_in_schema=False)
 async def raiz():
     return {"servicio": "Lyra API", "docs": "/docs", "salud": "/api/salud"}
+
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=port,
+        proxy_headers=True,
+        forwarded_allow_ips="*",
+    )
+
