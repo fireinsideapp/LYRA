@@ -1,0 +1,5 @@
+Coloque aquí las imágenes de recetas y pasos. Se sirven en GET /recetas/{archivo}.
+
+Convención de nombres (la API sólo devuelve imagen_url si el archivo existe):
+  {slug}.jpg          -> portada de la receta   (ej. huevos-a-la-mexicana.jpg)
+  {slug}-{orden}.jpg  -> imagen de cada paso    (ej. huevos-a-la-mexicana-3.jpg)
